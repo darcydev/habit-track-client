@@ -93,7 +93,6 @@ export default function Habits() {
                 <AiOutlinePlus />
               </button>
             )}
-            <h1>{error && <p>{error}</p>}</h1>
             <h1>Your Habits</h1>
             <ul>
               {habits.length > 0 ? (
