@@ -1,5 +1,4 @@
-import Head from 'next/head';
-
+import PageHead from '../components/Head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -8,10 +7,7 @@ import { connectToDatabase } from '../util/mongodb';
 export default function Home({ isConnected }) {
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <PageHead pageTitle='Home' />
       <Header />
       <main>
         {isConnected ? (

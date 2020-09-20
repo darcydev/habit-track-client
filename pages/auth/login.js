@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import styled from 'styled-components';
 
+import PageHead from '../../components/Head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import LoginForm from '../../components/forms/LoginForm';
@@ -8,10 +8,7 @@ import LoginForm from '../../components/forms/LoginForm';
 export default function LoginPage() {
   return (
     <div>
-      <Head>
-        <title>Login | HabitTracker</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <PageHead pageTitle='Login' />
       <Header />
       <main>
         <StyledPage className='page-wrp'>

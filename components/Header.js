@@ -30,7 +30,7 @@ export default function Header() {
           </Link>
         </div>
         <div className='nav-wrp'>
-          <button class='hamburger-btn' onClick={() => setNavOpen(!navOpen)}>
+          <button className='hamburger-btn' onClick={() => setNavOpen(!navOpen)}>
             {navOpen ? (
               <img src='/images/icon--close.svg' alt='Nav menu close' />
             ) : (
@@ -40,13 +40,13 @@ export default function Header() {
           {navOpen && (
             <nav>
               <ul>
-                <li>
-                  <Link href='/habits'>
-                    <a>Habits</a>
-                  </Link>
-                </li>
                 {context.token && context.userID ? (
                   <>
+                    <li>
+                      <Link href='/habits'>
+                        <a>Habits</a>
+                      </Link>
+                    </li>
                     <li>
                       <Link href='/account'>
                         <a>Account</a>

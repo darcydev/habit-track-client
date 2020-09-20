@@ -31,13 +31,13 @@ export default function Footer() {
         <div className='nav-wrp'>
           <nav>
             <ul>
-              <li>
-                <Link href='/habits'>
-                  <a>Habits</a>
-                </Link>
-              </li>
               {context.token && context.userID ? (
                 <>
+                  <li>
+                    <Link href='/habits'>
+                      <a>Habits</a>
+                    </Link>
+                  </li>
                   <li>
                     <Link href='/account'>
                       <a>Account</a>

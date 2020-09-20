@@ -28,8 +28,6 @@ export default function LoginForm() {
     res
       .json()
       .then((res) => {
-        console.log('res :>> ', res);
-
         if (res.userID && res.token) {
           setContext((prev) => ({
             ...prev,
@@ -66,7 +64,7 @@ export default function LoginForm() {
       />
       {errors.password && <span className='error-message'>{errors.password.message}</span>}
       {error && <span className='error-message'>{error}</span>}
-      <input className='btn submit' type='submit' />
+      <input className='btn--main' type='submit' />
       <div className='link-wrp'>
         <Link href='/auth/register'>
           <a>Don't have an account yet? Register here</a>
@@ -90,21 +88,6 @@ const StyledForm = styled.form`
     border-radius: 0;
     font-size: 22px;
     padding-left: 10px;
-  }
-
-  input.submit {
-    cursor: pointer;
-    width: 300px;
-    background: var(--main--blue--dark);
-    border: none;
-    color: #fff;
-    font-size: 25px;
-    border-radius: 10px;
-
-    &:hover {
-      color: #000;
-      background: lightblue;
-    }
   }
 
   span.error-message {

@@ -64,7 +64,12 @@ export default function RegisterForm() {
       />
       {errors.password && <span className='error-message'>{errors.password.message}</span>}
       {error && <span className='error-message'>{error}</span>}
-      <input type='submit' className='btn submit' />
+      <input type='submit' className='btn--main' />
+      <div className='link-wrp'>
+        <Link href='/auth/login'>
+          <a>Already have an account? Login here</a>
+        </Link>
+      </div>
     </StyledForm>
   );
 }
@@ -83,21 +88,6 @@ const StyledForm = styled.form`
     border-radius: 0;
     font-size: 22px;
     padding-left: 10px;
-  }
-
-  input.submit {
-    cursor: pointer;
-    width: 300px;
-    background: var(--main--blue--dark);
-    border: none;
-    color: #fff;
-    font-size: 25px;
-    border-radius: 10px;
-
-    &:hover {
-      color: #000;
-      background: lightblue;
-    }
   }
 
   span.error-message {
