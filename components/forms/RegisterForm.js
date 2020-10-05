@@ -17,7 +17,7 @@ export default function RegisterForm() {
       password: data.password,
     };
 
-    const res = await fetch('http://localhost:8000/api/user/register', {
+    const res = await fetch('http://localhost:8000/api/auth/register', {
       method: 'POST',
       body: JSON.stringify(requestBody),
       headers: {
